@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 #Título de la app
-st.title("Gráfico Básico con Plotly")
+st.title("Representación del impacto de Agua basándonos en los datos del CDP")
 
 #Subir archivo CSV
 uploaded_file = st.file_uploader("Sube tu archivo Excel", type=["xlsx"])
