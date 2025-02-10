@@ -6,12 +6,12 @@ import plotly.express as px
 st.title("Gráfico Básico con Plotly")
 
 #Subir archivo CSV
-uploaded_file = st.file_uploader("Sube tu archivo CSV", type=["csv"])
+uploaded_file = st.file_uploader("Sube tu archivo Excel", type=["xlsx"])
 
 #Verificar si el archivo se ha subido
 if uploaded_file:
     #Leer el archivo CSV
-    data = pd.read_csv(uploaded_file)
+    data = pd.read_excel(uploaded_file)
 
     # Mostrar los primeros 5 registros del archivo subido
     st.subheader("Vista previa de los datos")
@@ -24,4 +24,3 @@ if uploaded_file:
     st.plotly_chart(fig)
 else:
     st.info("Sube un archivo CSV para ver el gráfico.")
-    
